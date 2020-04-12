@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="public/styles/modules.css" type="text/css">
+    <link rel="stylesheet" href="public/styles/base.css" type="text/css">
+    <link rel="stylesheet" href="public/styles/layout.css" type="text/css">
+
+    <title>search field</title>
+</head>
+<body>
+<!-- 
+
+    <header>
+        <nav>
+            <ul class="nav">
+     
+               <li>
+                <a href="">home</a>
+               </li> 
+               
+               <li>
+
+                   <a href="">books</a>
+               </li>
+            </ul>
+        </nav>
+    </header>
+    -->
+    <form action="/searches/show" method="POST">
+        <fieldset>
+            <label for="">Search by Title or Author</label> </br></br>
+            Search box<input id="text" type="text"  name="input" placeholder="Enter a title or author" required="required"></br>
+            <input type="radio" name="searchBy"value="title " required="required">Title <br>
+            <input type="radio" name="searchBy" value="Author"   > Author <br></br>
+            <input class="submit"type="submit">
+        </fieldset>
+            </form>
+    
+</body>
+</html>

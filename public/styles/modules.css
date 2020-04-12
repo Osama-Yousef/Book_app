@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Comfortaa|Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Comfortaa|Lobster|Righteous&display=swap');
+
+@media(min-width: 768px) {
+html{
+    color: cornsilk;
+    background-color: rgb(96, 146, 72);
+}
+
+.nav{
+    width: 100%;
+    margin: auto;
+    height: 4pc;
+    background-color: rgba(0, 0, 0, 0.815);
+    font-size: 30px;
+    margin-bottom: 6pc;
+    font-family: 'Righteous', cursive;
+}
+/*
+.nav li{
+    display: inline;
+    list-style: none;
+    padding: 10px;   
+}
+.nav li a:hover{
+    background-color: cornsilk ;
+    color: black;
+    margin-top: 20px;
+}
+.nav li a {
+    padding: 10px;
+    color: cornsilk;
+    text-decoration: none;
+
+}
+
+*/
+fieldset{
+    width: 60%;
+    height: 30pc;
+    margin: auto;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+    background-color: rgba(0, 0, 0, 0.815);
+    padding: 2pc;
+}
+#text{
+    width: 20pc;
+    height: 2pc;
+}
+input{
+    margin: 20px;
+    padding: 10px;
+}
+
+label{
+    width: 100%;
+    margin-left: 10pc;
+}
+.submit{
+    width: 10pc;
+    height: 3pc;
+    margin-left: 19pc;
+    font-size: 20px;
+    margin-top: 4pc;
+}
+.submit:hover{
+    transform: scale(1.2);
+    transition: 490ms;
+}
+ul{
+    margin: auto;
+}
+.continer{
+
+    text-align: center;
+    list-style: none;
+    box-shadow: 0 10px 6px -6px #777;
+    border: 3px inset lightGray;
+    border-radius: 10%;
+    padding: 50px;
+    width: 60%;
+    height: 100%;
+    margin: 20px 50px 20px 12pc;
+    background-color: rgba(0, 0, 0, 0.815);
+    font-family: 'Comfortaa', cursive;
+font-size: 20px;
+
+}
+.title{
+    padding-top: 25px;
+    background-color: rgb(17, 17, 17);
+    /* color: rgb(206, 119, 13); */
+    text-align: center;
+    height: 80px;
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+
+}
+img{
+    width: 200px;
+    height: 250px;
+}
+}
+@media  (max-width: 768px) {
+    html{
+        color: cornsilk;
+        background-color: rgb(96, 146, 72);
+    }
+    .nav{
+        width: 100%;
+        margin: auto;
+        height: 4pc;
+        background-color: rgba(0, 0, 0, 0.815);
+        font-size: 30px;
+        margin-bottom: 6pc;
+        font-family: 'Righteous', cursive;
+    }
+    .nav li{
+        display: inline;
+        list-style: none;
+        padding: 10px;   
+    }
+    .nav li a:hover{
+        background-color: cornsilk ;
+        color: black;
+        margin-top: 20px;
+    }
+    .nav li a {
+        padding: 10px;
+        color: cornsilk;
+        /* margin-top: 5pc; */
+        text-decoration: none;
+    
+    }
+    fieldset{
+        width: 50%;
+        height: 30pc;
+        margin: auto;
+        font-size: 30px;
+        font-family: 'Righteous', cursive;
+        background-color: rgba(0, 0, 0, 0.815);
+        padding: 2pc;
+    }
+    #text{
+        width: 20pc;
+        height: 2pc;
+    }
+    input{
+        margin: 20px;
+        padding: 10px;
+    }
+    
+    label{
+        width: 100%;
+        margin-left: 5px;
+    }
+    .submit{
+        width: 10pc;
+        height: 3pc;
+        margin-left: 7pc;
+        font-size: 20px;
+        margin-top: 2pc;
+    }
+    .submit:hover{
+        transform: scale(1.2);
+        transition: 490ms;
+    }
+    ul{
+        margin: auto;
+    }
+    .continer{
+      float: left;
+        text-align: center;
+        list-style: none;
+        box-shadow: 0 10px 6px -6px #777;
+        border: 3px inset lightGray;
+        border-radius: 10%;
+       padding: 1pc;
+        width: 90%;
+        height: 100%;
+        margin: 20px 0px 20px 0px;
+        background-color: rgba(0, 0, 0, 0.815);
+        font-family: 'Comfortaa', cursive;
+    font-size: 15px;
+    
+    }
+    .title{
+        padding-top: 25px;
+        background-color: rgb(17, 17, 17);
+        /* color: rgb(206, 119, 13); */
+        text-align: center;
+        height: 60px;
+        font-family: 'Lobster', cursive;
+        font-size: 33px;
+    
+    }
+    img{
+        width: 200px;
+        height: 250px;
+    }
+}
