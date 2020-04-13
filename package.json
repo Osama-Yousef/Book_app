@@ -1,7 +1,7 @@
 {
   "name": "Book_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "* [trello link](https://trello.com/osamawalidyousef/activity) for the activites we did  * [heroku link](https://book---app.herokuapp.com/ )",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

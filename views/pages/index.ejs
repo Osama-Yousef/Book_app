@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,24 +10,7 @@
     <title>search field</title>
 </head>
 <body>
-<!-- 
 
-    <header>
-        <nav>
-            <ul class="nav">
-     
-               <li>
-                <a href="">home</a>
-               </li> 
-               
-               <li>
-
-                   <a href="">books</a>
-               </li>
-            </ul>
-        </nav>
-    </header>
-    -->
     <form action="/searches/show" method="POST">
         <fieldset>
             <label for="">Search by Title or Author</label> </br></br>
@@ -37,5 +21,46 @@
         </fieldset>
             </form>
     
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="/public/styles/modules.css" type="text/css">
+    <title>search field</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+
+               <li>
+                <a href="/">home</a>
+               </li> 
+               
+               <li>
+
+                   <a href="/searches/new">Search the Google API Books</a>
+               </li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="title">Search Result</h1>
+    <p> <%= allbooks.lenght %></p>  <!-- books = data.rows  -->
+    <ul>
+        <% allbooks.forEach(book => { %>
+            <div class="div">
+        <li class="continer">
+                <p><%= book.title %></p>
+                <img src="<%= book.image_url %>">
+                <p><%= book.author %></p>
+                <p class="text"><%= book.description %></p>
+                <button><a href="/books/detail/<%= book.id %>">view Details</a></button>
+            </li>
+        <% }) %>
+    </ul>
 </body>
 </html>
