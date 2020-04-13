@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
 });
 */
 
+
 app.get('/', (req, res) => {
 
     res.render('pages/index')
@@ -75,11 +76,12 @@ function Book(data) {
     this.desc = data.volumeInfo.description ? data.volumeInfo.description : "No description available";
 }
 
-
-
+let message = "ERROR"
 app.get('*', (req, res) => {
-    res.status(404).send('not found');
+    res.status(404).render('pages/error', { 'message': message })
 });
+
+
 
 app.listen(PORT, () => console.log(`up and running on port ${PORT}`));
 
