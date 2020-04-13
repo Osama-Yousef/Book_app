@@ -5,14 +5,14 @@
 @media(min-width: 768px) {
 html{
     color: cornsilk;
-    background-color: rgb(96, 146, 72);
+    background-color: royalblue;
 }
 
 .nav{
     width: 100%;
     margin: auto;
     height: 4pc;
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: bisque;
     font-size: 30px;
     margin-bottom: 6pc;
     font-family: 'Righteous', cursive;
@@ -106,17 +106,18 @@ img{
 @media  (max-width: 768px) {
     html{
         color: cornsilk;
-        background-color: rgb(96, 146, 72);
+        background-color: royalblue;
     }
     .nav{
         width: 100%;
         margin: auto;
         height: 4pc;
-        background-color: rgba(0, 0, 0, 0.815);
+        background-color: bisque;
         font-size: 30px;
         margin-bottom: 6pc;
         font-family: 'Righteous', cursive;
     }
+    /*
     .nav li{
         display: inline;
         list-style: none;
@@ -130,10 +131,11 @@ img{
     .nav li a {
         padding: 10px;
         color: cornsilk;
-        /* margin-top: 5pc; */
         text-decoration: none;
     
     }
+    */
+
     fieldset{
         width: 50%;
         height: 30pc;

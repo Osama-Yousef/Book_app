@@ -1,8 +1,8 @@
 @media(min-width: 768px) {
     .text{
         text-align: center;
-        background: rgb(179, 124, 52);
-        color: white;
+        background: bisque;
+        color: black;
         padding: 30px;
         width: 70%;
         height: 100px;
@@ -14,8 +14,8 @@
     @media (max-width: 768px){
         .text{
             text-align: center;
-            background: rgb(179, 124, 52);
-            color: white;
+            background: bisque;
+            color: black;
             padding: 30px;
             width: 70%;
             height: 100px;
