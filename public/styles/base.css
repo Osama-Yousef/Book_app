@@ -1,5 +1,13 @@
+
+/*
 body{
     display: grid;
-  /*  background-color: rgb(96, 146, 72);*/
   background-color: royalblue;
+} 
+*/
+
+body{
+  display: grid;
+  background-color: rgb(96, 146, 72);
+  
 } 

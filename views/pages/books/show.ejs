@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/public/styles/base.css" type="text/css">
+    <link rel="stylesheet" href="/public/styles/modules.css" type="text/css">
+    <link rel="stylesheet" href="/public/styles/layout.css" type="text/css">
+
+    <title>books</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+
+               <li>
+                <a href="/">home</a>
+               </li> 
+               
+               <li>
+
+                   <a href="/searches/new">Search the Google API Books</a>
+               </li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="title">books details</h1>
+    <img src="<%= books.image_url %>"> 
+    <p><%= books.title %></p>
+    <p><%= books.author %></p>
+    <p><%= books.description %></p>
+
+ 
+
+</body>
+
+</html>
