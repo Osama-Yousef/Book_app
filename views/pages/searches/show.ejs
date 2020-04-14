@@ -73,11 +73,11 @@
                     <br>
                     <input name="id" type="text" value="<%= book.id %>">
                     <br>
-                    <input name="image" type="text" value=" <%= book.imgUrl %>">
+                    <input name="image_url" type="text" value=" <%= book.imgUrl %>">
                     <br>
-                    <input name="info" type="text" value="<%= book.desc %>">
+                    <input name="description" type="text" value="<%= book.desc %>">
                     <br>
-                    <input type="text" name="shelf" placeholder="Enter a Bookshelf Name" required>
+                    <input type="text" name="bookshelf" placeholder="Enter a Bookshelf Name" required>
                     <br>
                     <button type="submit" name="submit" id="DB"><a href="/books/detail"></a>add to DataBase</button>
                 </form>
