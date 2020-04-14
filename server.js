@@ -78,26 +78,26 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const pg = require('pg');
 const client = new pg.Client(process.env.DATABASE_URL);
-/*
+
 const methodOverride = require('method-override'); // to use the override method
-*/
+
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static('public'));
 app.set('view engine', 'ejs');
-/*
+
 app.use(methodOverride('_method')) ; // to use the override method
-*/
+
 app.get('/searches/new', searchForm); // function 1
 app.post('/searches', getDataFromForm); // function 2
 app.get ('/' , getAllBooks); // function 3
 app.get('/books/detail' , addBook); // function 4
 app.post('/books/detail' , processBook); // function 5
 app.get('/books/detail/:allbooks_id' , addBookById) // function 6
-/*
+
 // in lab 13 we will add these two new functions
 app.put('/update/:book_id', updateBook)// function 7
 app.delete('/delete/:the_book' , deleteBook) // function 8
-*/
+
 
 
 function handleError(error, response){
@@ -167,7 +167,7 @@ function addBookById( req ,res){
     }).catch(err => handleError(err));
 
 }
-/*
+
 //function 7 ( for updating )
 function updateBook (req,res){
     let { title, author, isbn, image, description, bookshelf} = req.body ;
@@ -191,7 +191,7 @@ function deleteBook(req , res){
     })
 
 }
-*/
+
 // constractuor function 
 function Book(data) {
     // if statements  as one line method
