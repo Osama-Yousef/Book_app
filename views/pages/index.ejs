@@ -49,13 +49,13 @@
         </nav>
     </header>
     <h1 class="title">Search Result</h1>
-    <p> <%= allbooks.lenght %></p>  <!-- books = data.rows  -->
+    <p> You have <%=allbooks.length%> books </p>  <!-- books = data.rows  -->
     <ul>
         <% allbooks.forEach(book => { %>
             <div class="div">
         <li class="continer">
                 <p><%= book.title %></p>
-                <img src="<%= book.image_url %>">
+                <img src="<%=book.image_url%>">
                 <p><%= book.author %></p>
                 <p class="text"><%= book.description %></p>
                 <button><a href="/books/detail/<%= book.id %>">view Details</a></button>

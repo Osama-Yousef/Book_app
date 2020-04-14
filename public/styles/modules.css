@@ -181,6 +181,8 @@ img{
 html{
     color: cornsilk;
     background-color: rgb(96, 146, 72);
+    font-size: xx-large;
+    font-family: monospace;
 }
 .nav{
     width: 100%;
@@ -278,7 +280,9 @@ img{
 @media  (max-width: 768px) {
     html{
         color: cornsilk;
-        background-color: rgb(96, 146, 72);
+    background-color: rgb(96, 146, 72);
+    font-size: xx-large;
+    font-family: monospace;
     }
     .nav{
         width: 100%;

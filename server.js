@@ -78,16 +78,27 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const pg = require('pg');
 const client = new pg.Client(process.env.DATABASE_URL);
+/*
+const methodOverride = require('method-override'); // to use the override method
+*/
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static('public'));
 app.set('view engine', 'ejs');
-
+/*
+app.use(methodOverride('_method')) ; // to use the override method
+*/
 app.get('/searches/new', searchForm); // function 1
 app.post('/searches', getDataFromForm); // function 2
 app.get ('/' , getAllBooks); // function 3
 app.get('/books/detail' , addBook); // function 4
 app.post('/books/detail' , processBook); // function 5
 app.get('/books/detail/:allbooks_id' , addBookById) // function 6
+/*
+// in lab 13 we will add these two new functions
+app.put('/update/:book_id', updateBook)// function 7
+app.delete('/delete/:the_book' , deleteBook) // function 8
+*/
+
 
 function handleError(error, response){
     response.render('pages/error', {error: error});
@@ -124,7 +135,7 @@ function getDataFromForm(req, res) {
 // function 3
 function getAllBooks(req ,res){
     let SQL = `SELECT * FROM books ;`;
-    client.query(SQL)
+    return client.query(SQL)
     .then( data => {
         res.render('pages/index.ejs' , {allbooks : data.rows});
     }).catch(err => handleError(err));
@@ -138,7 +149,7 @@ function processBook (req ,res){
     let {title, author, isbn, image_url, description, bookshelf} =req.body;
     let SQL = `INSERT INTO books (title, author, isbn, image_url, description, bookshelf) VALUES ($1 , $2 , $3 , $4 , $5 ,$6) ;`;
     let values = [title, author, isbn, image_url, description, bookshelf];
-    client.query(SQL ,values)
+    return client.query(SQL ,values)
     .then( () => {
         res.redirect('/');
     }).catch( err => handleError(err));
@@ -156,7 +167,31 @@ function addBookById( req ,res){
     }).catch(err => handleError(err));
 
 }
+/*
+//function 7 ( for updating )
+function updateBook (req,res){
+    let { title, author, isbn, image, description, bookshelf} = req.body ;
+  let SQL = 'UPDATE books SET author=$1, title=$2, isbn=$3, image_url=$4, description=$5, bookshelf=$6 WHERE id=$7 ;';
+  let values =[author, title, isbn, image, description ,bookshelf, req.params.book_id];
+  return client.query(SQL, values)
+    .then(() => {
+      return res.redirect(`/books/detail/${req.params.book_id}`);
+    })
+}
 
+// function 8 ( for deleting)
+
+function deleteBook(req , res){
+    let SQL = `DELETE FROM books WHERE id=$1 ;` ;
+    let values = [req.params.the_book];
+    return client.query(SQL , values)
+    .then(() => {
+
+      return res.redirect('/');
+    })
+
+}
+*/
 // constractuor function 
 function Book(data) {
     // if statements  as one line method

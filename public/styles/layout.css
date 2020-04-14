@@ -40,6 +40,14 @@
             border: 1px solid #ccc;
             margin-left: 3pc;
         }
+/* adding .desc for lab 13 
+.desc{
+    width: 50%;
+    height: 10pc;
+    overflow: auto;
+}
+*/
+
         }
         @media (max-width: 768px){
             .text{
@@ -53,4 +61,12 @@
                 margin-left: 2pc;
                 border: 1px solid #ccc;
             } 
+        }
+
+        /* adding .desc for lab 13 */
+
+        .desc{
+            overflow: auto;
+            width:50%;
+            height: 10pc;
         }
