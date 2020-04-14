@@ -25,17 +25,18 @@
     <h1 class="title">books details</h1>
     <!--from here we will make some changes for making update and delete-->
         <!--we added unordered list (ul / li ) and added a form -->
-<!--
+
     <ul>
         <li>
--->
+
     <img src="<%= bookChouse.image_url %>">
     
     <p><%= bookChouse.title %></p>
     <p><%= bookChouse.author %></p>
     <p class="text"><%= bookChouse.description %></p>
     <h2> Bookshelf: <%= bookChouse.bookshelf %> </h2>
-<!--adding a form
+<!--adding a form-->
+
 <form action="<%=`/delete/${bookChouse.id}?_method=DELETE`%>"method="POST">
     <button type="submit">Delete book</button>
     </form>
@@ -59,7 +60,6 @@
 </form>
 </li>
 </ul>
--->
 </body>
 
 </html>
